@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Image = Novacode.Image;
 
 
 namespace FortolketOpgave
@@ -168,6 +169,10 @@ namespace FortolketOpgave
        # region Start document docX - code
             using (DocX document = DocX.Create(@"docs\Indentation.docx"))
             {
+                //The main content - layout:
+                
+                // Create a picture (A custom view of an Image).
+                //Picture picture = image.CreatePicture();
 
                 #region Header - implemented code
                 // Add Headers and Footers to this document.
@@ -178,19 +183,32 @@ namespace FortolketOpgave
                 document.DifferentFirstPage = true;
                 // Get the first Header for this document.
                 Header header_first = document.Headers.first;
+                
+                Table header_first_table = header_first.InsertTable(1, 3);
+                
+               
+                
                 // Insert a Paragraph into the first Header.
-                Paragraph p0 = header_first.InsertParagraph();
-                p0.Append("Computer opsætning").Font(new FontFamily("Times New Roman")).FontSize(32).Color(Color.Blue).Bold();
-
+                Paragraph p0 = header_first.Tables[0].Rows[0].Cells[1].Paragraphs[0];
+                p0.Append("Computeropsætning").Font(new FontFamily("Times New Roman")).FontSize(32).Color(Color.Blue).Bold();
+                
+                
                 p0.Alignment = Alignment.center;
                 // Save all changes made to this document.
+                Image logo = document.AddImage(@"U:\AspIT1020\2.år - flex\projekter\FortolketOpgave\FortolketOpgave\aspit_alm_sort_uden_tekst.png");
+                Paragraph upperRightParagraph = header_first.Tables[0].Rows[0].Cells[2].Paragraphs[0];
+                // Insert this template logo into the upper right Paragraph of Table.
+                upperRightParagraph.AppendPicture(logo.CreatePicture());
+                upperRightParagraph.Alignment = Alignment.right;
             
 
 
                 #endregion 
 
                 #region Main content
-                //The main content - layout:
+              
+                
+                
 
                 Paragraph allText = document.InsertParagraph().AppendLine();
                 allText.AppendLine();
@@ -212,12 +230,18 @@ namespace FortolketOpgave
                 allText.AppendLine();
                 allText.Append(de.Connection.TheText);
 
+
                 // System.Diagnostics.Process.Start(@".Manual.pdf");
 
                 document.Save();
                 #endregion
    
             }
+
+            //using (DocX document = DocX.Create(@"docs\HeadersAndFootersWithImagesAndTablesUsingInsertPicture.docx"))
+            //{
+               
+            //}
 
             #endregion 
 
