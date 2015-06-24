@@ -11,7 +11,6 @@ namespace FortolketOpgave
     {
         DAL dal = new DAL();
 
-
         public DataExtractions Randomize(int platformId)
         {
             Random r = new Random();
@@ -50,7 +49,6 @@ namespace FortolketOpgave
             var unit = query[0];
             #endregion
 
-
             DataExtractions extract = new DataExtractions();
             extract.Browser = theBrowsers;
             extract.Connection = connection;
@@ -60,7 +58,6 @@ namespace FortolketOpgave
 
             return extract;
         }
-
 
         internal List<Browsers> ShowBrowser()
         {
@@ -74,7 +71,6 @@ namespace FortolketOpgave
                 browser.TheId = Convert.ToInt32(item["Id"].ToString());
                 browser.TheBrowser = item["Browser"].ToString();
                 l1.Add(browser);
-
 
             }
             return l1;
@@ -140,7 +136,6 @@ namespace FortolketOpgave
                 program.TheId = Convert.ToInt32(item["Id"].ToString());
                 program.TheProgram = item["Program"].ToString();
                 l1.Add(program);
-
             }
             return l1;
         }
@@ -161,7 +156,6 @@ namespace FortolketOpgave
             return l1;
         }
 
-
         internal List<Quantity> ShowUnits()
         {
 
@@ -173,7 +167,6 @@ namespace FortolketOpgave
                 units.TheQuantity = Convert.ToInt32(item["Quantity"].ToString());
                 units.TheRank = Convert.ToInt32(item["Rank"].ToString());
                 l1.Add(units);
-
 
             }
             return l1;
@@ -212,7 +205,6 @@ namespace FortolketOpgave
             else
                 dal.AddTwoLinesProgram(theProgram);
         }
-
 
 
         internal void InsertConnectionValue(string connection)

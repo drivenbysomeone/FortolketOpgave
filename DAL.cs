@@ -14,11 +14,8 @@ namespace FortolketOpgave
         string connectionString = ConfigurationManager.ConnectionStrings["connect"].ConnectionString;
         public DataTable GetData(string sql)
         {
-
             //Remember add System.Configuration in References - when adding the SQL-string in App-config. 
             //AND add using System.Configuration - in DAL-class
-
-
 
             DataTable dt = new DataTable();
             using (var con = new SqlConnection(connectionString))
@@ -45,14 +42,12 @@ namespace FortolketOpgave
                 {
                     con.Open();
                     modified = (int)cmd.ExecuteScalar();
-
                 }
             }
             return modified;
         }
         public void InsertData(string sql)
         {
-
             using (var con = new SqlConnection(connectionString))
             {
                 using (var cmd = new SqlCommand(sql, con))
@@ -62,22 +57,18 @@ namespace FortolketOpgave
                     cmd.ExecuteNonQuery();
                 }
             }
-
         }
-
 
         internal DataTable GetBrowsers()
         {
             string queryString = "SELECT * FROM Browsers";
             return GetData(queryString);
-
         }
 
         internal DataTable GetInternet()
         {
             string queryString = "SELECT * FROM Internet";
             return GetData(queryString);
-
         }
 
         internal DataTable GetPrograms()
@@ -91,8 +82,7 @@ namespace FortolketOpgave
             string queryString = "SELECT * FROM TheOS";
             return GetData(queryString);
         }
-
-    
+  
         internal DataTable GetProgramsById(int i)
         {
             string query = "";
@@ -122,13 +112,11 @@ namespace FortolketOpgave
                 query += " group by OSId having count(OSId) > 1)";
                 query += " and PlatformOs.OSId = TheOS.Id";
             }
-
             else
             {
                 query = "SELECT a.Id, a.[Operating System] FROM TheOS a, PlatformOs b WHERE";
                 query += " b.PlatformsId = " + i + " AND a.Id = b.OSId";
             }
-
             return GetData(query);
 
         }
@@ -138,7 +126,6 @@ namespace FortolketOpgave
 
             string queryString = "SELECT * FROM Units";
             return GetData(queryString);
-
         }
 
         internal void addNewBrowserValue(Browsers browser)
@@ -205,20 +192,9 @@ namespace FortolketOpgave
                 int id = Convert.ToInt32(row["Id"].ToString());
                 string query = "INSERT INTO PlatformProgram (PlatformId, ProgramId) VALUES (" + id + ", " + modified + ")";
                 InsertData(query);
-
             }
         }
-
-
-
     }
 }
-
-
-//foreach (var item in collection)
-//{
-
-//}
-
 
 
