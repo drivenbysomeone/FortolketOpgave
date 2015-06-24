@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnGetData = new System.Windows.Forms.Button();
             this.listOS = new System.Windows.Forms.ListBox();
             this.txtBoxInput = new System.Windows.Forms.TextBox();
@@ -45,15 +46,20 @@
             this.lblProgramsInfo = new System.Windows.Forms.Label();
             this.lblConfigInfo = new System.Windows.Forms.Label();
             this.cmbBoxPlatforms = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGetData
             // 
-            this.btnGetData.Location = new System.Drawing.Point(383, 401);
+            this.btnGetData.Location = new System.Drawing.Point(443, 599);
             this.btnGetData.Name = "btnGetData";
             this.btnGetData.Size = new System.Drawing.Size(98, 23);
             this.btnGetData.TabIndex = 0;
-            this.btnGetData.Text = "Generer Opgave";
+            this.btnGetData.Text = "Generer opgave";
             this.btnGetData.UseVisualStyleBackColor = true;
             this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
             // 
@@ -65,33 +71,33 @@
             this.listOS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listOS.ScrollAlwaysVisible = true;
             this.listOS.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listOS.Size = new System.Drawing.Size(156, 108);
+            this.listOS.Size = new System.Drawing.Size(227, 134);
             this.listOS.TabIndex = 1;
             // 
             // txtBoxInput
             // 
-            this.txtBoxInput.Location = new System.Drawing.Point(199, 210);
+            this.txtBoxInput.Location = new System.Drawing.Point(307, 207);
             this.txtBoxInput.Multiline = true;
             this.txtBoxInput.Name = "txtBoxInput";
             this.txtBoxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBoxInput.Size = new System.Drawing.Size(281, 46);
+            this.txtBoxInput.Size = new System.Drawing.Size(372, 46);
             this.txtBoxInput.TabIndex = 5;
             // 
             // lblUserAddInfo
             // 
-            this.lblUserAddInfo.Location = new System.Drawing.Point(196, 148);
+            this.lblUserAddInfo.Location = new System.Drawing.Point(304, 163);
             this.lblUserAddInfo.Name = "lblUserAddInfo";
-            this.lblUserAddInfo.Size = new System.Drawing.Size(252, 59);
+            this.lblUserAddInfo.Size = new System.Drawing.Size(292, 41);
             this.lblUserAddInfo.TabIndex = 6;
-            this.lblUserAddInfo.Text = "*Indtast en ny værdi der matcher én af de fire nedenstående katagorier.\r\n     Væl" +
-    "g dernæst den matchende katagori - og klik på knappen \"Tilføj\"\r\n";
+            this.lblUserAddInfo.Text = "*Hvis en ny værdi ønskes - indtast en ny værdi der matcher én af de fire nedenstå" +
+    "ende katagorier.\r\n     Vælg dernæst den matchende katagori i katagorier.\r\n";
             // 
             // rdbOS
             // 
             this.rdbOS.AutoSize = true;
-            this.rdbOS.Location = new System.Drawing.Point(206, 262);
+            this.rdbOS.Location = new System.Drawing.Point(16, 27);
             this.rdbOS.Name = "rdbOS";
-            this.rdbOS.Size = new System.Drawing.Size(95, 17);
+            this.rdbOS.Size = new System.Drawing.Size(118, 20);
             this.rdbOS.TabIndex = 7;
             this.rdbOS.TabStop = true;
             this.rdbOS.Text = "operativsystem";
@@ -100,31 +106,31 @@
             // rdbBrowsers
             // 
             this.rdbBrowsers.AutoSize = true;
-            this.rdbBrowsers.Location = new System.Drawing.Point(206, 301);
+            this.rdbBrowsers.Location = new System.Drawing.Point(148, 27);
             this.rdbBrowsers.Name = "rdbBrowsers";
-            this.rdbBrowsers.Size = new System.Drawing.Size(68, 17);
+            this.rdbBrowsers.Size = new System.Drawing.Size(74, 20);
             this.rdbBrowsers.TabIndex = 8;
             this.rdbBrowsers.TabStop = true;
-            this.rdbBrowsers.Text = "browsere";
+            this.rdbBrowsers.Text = "browser";
             this.rdbBrowsers.UseVisualStyleBackColor = true;
             // 
             // rdbPrograms
             // 
             this.rdbPrograms.AutoSize = true;
-            this.rdbPrograms.Location = new System.Drawing.Point(206, 336);
+            this.rdbPrograms.Location = new System.Drawing.Point(16, 73);
             this.rdbPrograms.Name = "rdbPrograms";
-            this.rdbPrograms.Size = new System.Drawing.Size(80, 17);
+            this.rdbPrograms.Size = new System.Drawing.Size(77, 20);
             this.rdbPrograms.TabIndex = 9;
             this.rdbPrograms.TabStop = true;
-            this.rdbPrograms.Text = "programmer";
+            this.rdbPrograms.Text = "program";
             this.rdbPrograms.UseVisualStyleBackColor = true;
             // 
             // rdbConnectionConfig
             // 
             this.rdbConnectionConfig.AutoSize = true;
-            this.rdbConnectionConfig.Location = new System.Drawing.Point(206, 369);
+            this.rdbConnectionConfig.Location = new System.Drawing.Point(148, 73);
             this.rdbConnectionConfig.Name = "rdbConnectionConfig";
-            this.rdbConnectionConfig.Size = new System.Drawing.Size(75, 17);
+            this.rdbConnectionConfig.Size = new System.Drawing.Size(90, 20);
             this.rdbConnectionConfig.TabIndex = 10;
             this.rdbConnectionConfig.TabStop = true;
             this.rdbConnectionConfig.Text = "opsætning";
@@ -132,7 +138,7 @@
             // 
             // btnAddValue
             // 
-            this.btnAddValue.Location = new System.Drawing.Point(216, 401);
+            this.btnAddValue.Location = new System.Drawing.Point(307, 599);
             this.btnAddValue.Name = "btnAddValue";
             this.btnAddValue.Size = new System.Drawing.Size(85, 27);
             this.btnAddValue.TabIndex = 11;
@@ -143,52 +149,52 @@
             // listPrograms
             // 
             this.listPrograms.FormattingEnabled = true;
-            this.listPrograms.Location = new System.Drawing.Point(12, 320);
+            this.listPrograms.Location = new System.Drawing.Point(16, 492);
             this.listPrograms.Name = "listPrograms";
             this.listPrograms.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listPrograms.ScrollAlwaysVisible = true;
             this.listPrograms.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listPrograms.Size = new System.Drawing.Size(156, 108);
+            this.listPrograms.Size = new System.Drawing.Size(223, 134);
             this.listPrograms.TabIndex = 12;
             // 
             // listConnectionConfig
             // 
             this.listConnectionConfig.FormattingEnabled = true;
             this.listConnectionConfig.HorizontalScrollbar = true;
-            this.listConnectionConfig.Location = new System.Drawing.Point(196, 37);
+            this.listConnectionConfig.Location = new System.Drawing.Point(307, 37);
             this.listConnectionConfig.Name = "listConnectionConfig";
             this.listConnectionConfig.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listConnectionConfig.ScrollAlwaysVisible = true;
             this.listConnectionConfig.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listConnectionConfig.Size = new System.Drawing.Size(284, 108);
+            this.listConnectionConfig.Size = new System.Drawing.Size(372, 108);
             this.listConnectionConfig.TabIndex = 13;
             // 
             // listBrowsers
             // 
             this.listBrowsers.FormattingEnabled = true;
-            this.listBrowsers.Location = new System.Drawing.Point(11, 177);
+            this.listBrowsers.Location = new System.Drawing.Point(12, 266);
             this.listBrowsers.Name = "listBrowsers";
             this.listBrowsers.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBrowsers.ScrollAlwaysVisible = true;
             this.listBrowsers.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBrowsers.Size = new System.Drawing.Size(156, 108);
+            this.listBrowsers.Size = new System.Drawing.Size(227, 147);
             this.listBrowsers.TabIndex = 14;
             // 
             // lblOsInfo
             // 
             this.lblOsInfo.AutoSize = true;
             this.lblOsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOsInfo.Location = new System.Drawing.Point(13, 13);
+            this.lblOsInfo.Location = new System.Drawing.Point(12, 18);
             this.lblOsInfo.Name = "lblOsInfo";
-            this.lblOsInfo.Size = new System.Drawing.Size(105, 16);
+            this.lblOsInfo.Size = new System.Drawing.Size(117, 16);
             this.lblOsInfo.TabIndex = 15;
-            this.lblOsInfo.Text = "Operativsystem:";
+            this.lblOsInfo.Text = "Operativsystemer:";
             // 
             // lblBrowsersInfo
             // 
             this.lblBrowsersInfo.AutoSize = true;
             this.lblBrowsersInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrowsersInfo.Location = new System.Drawing.Point(13, 159);
+            this.lblBrowsersInfo.Location = new System.Drawing.Point(13, 247);
             this.lblBrowsersInfo.Name = "lblBrowsersInfo";
             this.lblBrowsersInfo.Size = new System.Drawing.Size(68, 16);
             this.lblBrowsersInfo.TabIndex = 16;
@@ -198,7 +204,7 @@
             // 
             this.lblProgramsInfo.AutoSize = true;
             this.lblProgramsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgramsInfo.Location = new System.Drawing.Point(12, 301);
+            this.lblProgramsInfo.Location = new System.Drawing.Point(13, 473);
             this.lblProgramsInfo.Name = "lblProgramsInfo";
             this.lblProgramsInfo.Size = new System.Drawing.Size(86, 16);
             this.lblProgramsInfo.TabIndex = 17;
@@ -208,25 +214,60 @@
             // 
             this.lblConfigInfo.AutoSize = true;
             this.lblConfigInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfigInfo.Location = new System.Drawing.Point(193, 13);
+            this.lblConfigInfo.Location = new System.Drawing.Point(304, 18);
             this.lblConfigInfo.Name = "lblConfigInfo";
-            this.lblConfigInfo.Size = new System.Drawing.Size(77, 16);
+            this.lblConfigInfo.Size = new System.Drawing.Size(151, 16);
             this.lblConfigInfo.TabIndex = 18;
-            this.lblConfigInfo.Text = "Opsætning:";
+            this.lblConfigInfo.Text = "Opsætningsmuligheder:";
             // 
             // cmbBoxPlatforms
             // 
             this.cmbBoxPlatforms.FormattingEnabled = true;
-            this.cmbBoxPlatforms.Location = new System.Drawing.Point(344, 264);
+            this.cmbBoxPlatforms.Location = new System.Drawing.Point(307, 444);
             this.cmbBoxPlatforms.Name = "cmbBoxPlatforms";
             this.cmbBoxPlatforms.Size = new System.Drawing.Size(136, 21);
             this.cmbBoxPlatforms.TabIndex = 19;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbPrograms);
+            this.groupBox1.Controls.Add(this.rdbOS);
+            this.groupBox1.Controls.Add(this.rdbBrowsers);
+            this.groupBox1.Controls.Add(this.rdbConnectionConfig);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(307, 473);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(234, 106);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Kategorier:";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(304, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(302, 156);
+            this.label1.TabIndex = 21;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(579, 564);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 538);
+            this.ClientSize = new System.Drawing.Size(691, 655);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbBoxPlatforms);
             this.Controls.Add(this.lblConfigInfo);
             this.Controls.Add(this.lblProgramsInfo);
@@ -236,16 +277,16 @@
             this.Controls.Add(this.listConnectionConfig);
             this.Controls.Add(this.listPrograms);
             this.Controls.Add(this.btnAddValue);
-            this.Controls.Add(this.rdbConnectionConfig);
-            this.Controls.Add(this.rdbPrograms);
-            this.Controls.Add(this.rdbBrowsers);
-            this.Controls.Add(this.rdbOS);
             this.Controls.Add(this.lblUserAddInfo);
             this.Controls.Add(this.txtBoxInput);
             this.Controls.Add(this.listOS);
             this.Controls.Add(this.btnGetData);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Computeropsætning";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,6 +311,9 @@
         private System.Windows.Forms.Label lblProgramsInfo;
         private System.Windows.Forms.Label lblConfigInfo;
         private System.Windows.Forms.ComboBox cmbBoxPlatforms;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

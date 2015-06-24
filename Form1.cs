@@ -124,7 +124,7 @@ namespace FortolketOpgave
             
             int countProgram = de.Program.Count;
 
-            if (countProgram < theCount)
+            if (countProgram == theCount)
             {
                 programs = "ingen programmer skal installeres";
             }
