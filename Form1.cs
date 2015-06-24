@@ -248,5 +248,22 @@ namespace FortolketOpgave
 
             allDataRevealed();         
         }
+
+        private void qboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This program is designed to give the user a basic understanding which programs, browsers etc is optimal for a specific platform");
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("To use this");
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Program shutdown was successfull");
+        }
+
+
     }
 }

@@ -51,6 +51,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tk = new System.Windows.Forms.ToolStripMenuItem();
+            this.qboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -58,7 +62,7 @@
             // 
             // btnGetData
             // 
-            this.btnGetData.Location = new System.Drawing.Point(443, 599);
+            this.btnGetData.Location = new System.Drawing.Point(468, 639);
             this.btnGetData.Name = "btnGetData";
             this.btnGetData.Size = new System.Drawing.Size(98, 23);
             this.btnGetData.TabIndex = 0;
@@ -69,7 +73,7 @@
             // listOS
             // 
             this.listOS.FormattingEnabled = true;
-            this.listOS.Location = new System.Drawing.Point(12, 37);
+            this.listOS.Location = new System.Drawing.Point(12, 51);
             this.listOS.Name = "listOS";
             this.listOS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listOS.ScrollAlwaysVisible = true;
@@ -79,7 +83,7 @@
             // 
             // txtBoxInput
             // 
-            this.txtBoxInput.Location = new System.Drawing.Point(307, 207);
+            this.txtBoxInput.Location = new System.Drawing.Point(332, 217);
             this.txtBoxInput.Multiline = true;
             this.txtBoxInput.Name = "txtBoxInput";
             this.txtBoxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -88,7 +92,7 @@
             // 
             // lblUserAddInfo
             // 
-            this.lblUserAddInfo.Location = new System.Drawing.Point(304, 163);
+            this.lblUserAddInfo.Location = new System.Drawing.Point(329, 173);
             this.lblUserAddInfo.Name = "lblUserAddInfo";
             this.lblUserAddInfo.Size = new System.Drawing.Size(292, 41);
             this.lblUserAddInfo.TabIndex = 6;
@@ -141,7 +145,7 @@
             // 
             // btnAddValue
             // 
-            this.btnAddValue.Location = new System.Drawing.Point(307, 599);
+            this.btnAddValue.Location = new System.Drawing.Point(332, 632);
             this.btnAddValue.Name = "btnAddValue";
             this.btnAddValue.Size = new System.Drawing.Size(85, 27);
             this.btnAddValue.TabIndex = 11;
@@ -152,7 +156,7 @@
             // listPrograms
             // 
             this.listPrograms.FormattingEnabled = true;
-            this.listPrograms.Location = new System.Drawing.Point(16, 492);
+            this.listPrograms.Location = new System.Drawing.Point(16, 506);
             this.listPrograms.Name = "listPrograms";
             this.listPrograms.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listPrograms.ScrollAlwaysVisible = true;
@@ -164,7 +168,7 @@
             // 
             this.listConnectionConfig.FormattingEnabled = true;
             this.listConnectionConfig.HorizontalScrollbar = true;
-            this.listConnectionConfig.Location = new System.Drawing.Point(307, 37);
+            this.listConnectionConfig.Location = new System.Drawing.Point(332, 51);
             this.listConnectionConfig.Name = "listConnectionConfig";
             this.listConnectionConfig.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listConnectionConfig.ScrollAlwaysVisible = true;
@@ -187,7 +191,7 @@
             // 
             this.lblOsInfo.AutoSize = true;
             this.lblOsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOsInfo.Location = new System.Drawing.Point(12, 18);
+            this.lblOsInfo.Location = new System.Drawing.Point(13, 24);
             this.lblOsInfo.Name = "lblOsInfo";
             this.lblOsInfo.Size = new System.Drawing.Size(117, 16);
             this.lblOsInfo.TabIndex = 15;
@@ -197,7 +201,7 @@
             // 
             this.lblBrowsersInfo.AutoSize = true;
             this.lblBrowsersInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrowsersInfo.Location = new System.Drawing.Point(13, 247);
+            this.lblBrowsersInfo.Location = new System.Drawing.Point(9, 247);
             this.lblBrowsersInfo.Name = "lblBrowsersInfo";
             this.lblBrowsersInfo.Size = new System.Drawing.Size(68, 16);
             this.lblBrowsersInfo.TabIndex = 16;
@@ -207,7 +211,7 @@
             // 
             this.lblProgramsInfo.AutoSize = true;
             this.lblProgramsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgramsInfo.Location = new System.Drawing.Point(13, 473);
+            this.lblProgramsInfo.Location = new System.Drawing.Point(13, 487);
             this.lblProgramsInfo.Name = "lblProgramsInfo";
             this.lblProgramsInfo.Size = new System.Drawing.Size(86, 16);
             this.lblProgramsInfo.TabIndex = 17;
@@ -217,7 +221,7 @@
             // 
             this.lblConfigInfo.AutoSize = true;
             this.lblConfigInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfigInfo.Location = new System.Drawing.Point(304, 18);
+            this.lblConfigInfo.Location = new System.Drawing.Point(329, 24);
             this.lblConfigInfo.Name = "lblConfigInfo";
             this.lblConfigInfo.Size = new System.Drawing.Size(151, 16);
             this.lblConfigInfo.TabIndex = 18;
@@ -226,7 +230,7 @@
             // cmbBoxPlatforms
             // 
             this.cmbBoxPlatforms.FormattingEnabled = true;
-            this.cmbBoxPlatforms.Location = new System.Drawing.Point(307, 444);
+            this.cmbBoxPlatforms.Location = new System.Drawing.Point(332, 468);
             this.cmbBoxPlatforms.Name = "cmbBoxPlatforms";
             this.cmbBoxPlatforms.Size = new System.Drawing.Size(136, 21);
             this.cmbBoxPlatforms.TabIndex = 19;
@@ -238,7 +242,7 @@
             this.groupBox1.Controls.Add(this.rdbBrowsers);
             this.groupBox1.Controls.Add(this.rdbConnectionConfig);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(307, 473);
+            this.groupBox1.Location = new System.Drawing.Point(332, 520);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(234, 106);
             this.groupBox1.TabIndex = 20;
@@ -247,7 +251,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(304, 276);
+            this.label1.Location = new System.Drawing.Point(329, 294);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(302, 156);
             this.label1.TabIndex = 21;
@@ -256,7 +260,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(579, 564);
+            this.pictureBox1.Location = new System.Drawing.Point(599, 583);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,24 +270,57 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tk});
+            this.tk,
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(691, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(711, 24);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // tk
             // 
+            this.tk.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.qboutToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.tk.Name = "tk";
-            this.tk.Size = new System.Drawing.Size(125, 20);
-            this.tk.Text = "toolStripMenuItem1";
+            this.tk.Size = new System.Drawing.Size(51, 20);
+            this.tk.Text = "Hjælp";
+            // 
+            // qboutToolStripMenuItem
+            // 
+            this.qboutToolStripMenuItem.Name = "qboutToolStripMenuItem";
+            this.qboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.qboutToolStripMenuItem.Text = "Om";
+            this.qboutToolStripMenuItem.Click += new System.EventHandler(this.qboutToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.helpToolStripMenuItem.Text = "Hjælp";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.aboutToolStripMenuItem.Text = "Luk";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 655);
+            this.ClientSize = new System.Drawing.Size(711, 674);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -339,6 +376,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tk;
+        private System.Windows.Forms.ToolStripMenuItem qboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
